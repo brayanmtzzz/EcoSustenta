@@ -370,7 +370,7 @@ footer {
     }
 
     .slide-inner {
-        height: 166px; /* Ajustar el tamaño del carrusel en móvil */
+        height: 226px; /* Ajustar el tamaño del carrusel en móvil */
     }
     .educational-resources ul {
         list-style: none;
