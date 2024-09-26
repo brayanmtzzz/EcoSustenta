@@ -180,8 +180,6 @@ footer {
 /* Ajustar el texto */
 .dispensadores-text {
     flex: 1;
-    padding-right: 20px; /* Ajustar el espacio entre el texto y el carrusel */
-    margin-right: 20px; /* Aumentar espacio entre el texto y el carrusel */
 }
 
 /* Ajustar el carrusel */
@@ -409,7 +407,6 @@ footer {
 
     .dispensadores-text {
         padding-right: 0; /* Elimina el padding lateral en móviles */
-        margin-bottom: 20px; /* Añadir espacio debajo del texto */
     }
 
     .dispensadores-text p {
