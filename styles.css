@@ -68,24 +68,50 @@ nav a:hover {
     border-radius: 5px;
 }
 
-
-
 .hero {
     margin-top: 80px;
     background: url('https://cdn-3.expansion.mx/dims4/default/850b3f4/2147483647/strip/true/crop/1583x663+0+0/resize/1800x754!/format/webp/quality/80/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F2e%2Fd0%2Feaee05bc48de938d567cd7f355d8%2Ftecnologia-verde-sustentable.jpg') no-repeat center center/cover;
     height: 60vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     color: white;
+    padding: 60px 20px; /* Mantener el padding para la imagen */
+    position: relative;
 }
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.93); /* Fondo negro traslúcido */
+    width: 100%; /* Ocupa todo el ancho */
+    padding: 20px 30px; /* Padding interno del texto */
+    margin: 0; /* Sin margen externo */
+    text-align: left;
+    position: absolute; /* Para sacar el contenedor del flujo normal y que no se vea afectado por el padding de .hero */
+    top: 55%; /* Centramos verticalmente usando top 50% */
+    left: 0;
+    transform: translateY(-50%); /* Ajustamos la posición para centrar el contenido */
+}
+
+.hero h2, .hero p {
+    max-width: 80%; /* Limitar el ancho del texto */
+    margin-left: 20px; /* Separación del texto con el borde izquierdo */
+}
+
 .hero h2 {
-    font-size: 3em;
+    font-size: 2.5em;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    margin-bottom: 10px;
 }
+
+.hero p {
+    font-size: 1.2em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
 section {
     padding: 60px 20px;
 }
+
 .section-title {
     font-size: 2em;
     text-align: center;
@@ -274,7 +300,6 @@ footer {
 
 /* Responsividad para móviles */
 @media (max-width: 768px) {
-
     header {
         display: flex;
         justify-content: space-between;
@@ -310,6 +335,19 @@ footer {
 
     .nav-menu li a {
         font-size: 1.2em;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+    .hero-content {
+        padding: 15px 20px;
+    }
+    .hero h2 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 1em;
     }
 
     .content-grid {
