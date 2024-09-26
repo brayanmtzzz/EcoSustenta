@@ -82,7 +82,7 @@ nav a:hover {
 
 .hero-content {
     background: rgba(0, 0, 0, 0.93); /* Fondo negro traslúcido */
-    width: 100%; /* Ocupa todo el ancho */
+    /* width: 93%; Ocupa todo el ancho */
     padding: 20px 30px; /* Padding interno del texto */
     margin: 0; /* Sin margen externo */
     text-align: left;
@@ -90,6 +90,9 @@ nav a:hover {
     top: 55%; /* Centramos verticalmente usando top 50% */
     left: 0;
     transform: translateY(-50%); /* Ajustamos la posición para centrar el contenido */
+    right: 0; /* Hacemos que el bloque abarque todo el ancho del contenedor */
+    transform: translateY(-50%); /* Centrado vertical */
+    box-sizing: border-box; /* Aseguramos que el padding esté dentro del ancho total */
 }
 
 .hero h2, .hero p {
