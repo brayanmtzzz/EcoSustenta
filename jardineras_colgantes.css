@@ -1,0 +1,180 @@
+/* Estilos globales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e8f5e9; /* Fondo verde suave */
+    color: #333;
+}
+
+header {
+    background-color: #007208;
+    padding: 20px; /* Espacio superior e inferior */
+    display: flex;
+    justify-content: flex-start; /* Mantener el ícono alineado a la izquierda */
+    align-items: center; /* Centrar verticalmente el ícono */
+}
+
+.home-link {
+    text-decoration: none;
+}
+
+.home-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Contenedor principal */
+.container {
+    padding: 0 5%; /* Aplica un margen en porcentaje para que sea responsivo */
+}
+
+/* Sección de introducción */
+.intro-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro-section h1 {
+    font-size: 2.5em;
+    color: #2e7d32; /* Verde oscuro */
+}
+
+.intro-section p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #555;
+}
+
+.main-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de beneficios */
+.benefits-section {
+    margin-bottom: 40px;
+}
+
+.benefits-section h2 {
+    font-size: 2em;
+    color: #2e7d32;
+    text-align: center;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.benefits-list li {
+    background-color: #f1f8e9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+}
+
+/* Sección de instrucciones */
+.instructions-section {
+    margin-bottom: 40px;
+}
+
+.instructions-section h2 {
+    font-size: 2em;
+    color: #2e7d32;
+    text-align: center;
+}
+
+/* Instrucciones sin numeración automática */
+.instructions-list {
+    list-style: none; /* Elimina la numeración automática */
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Aún puedes estilizar el texto del paso para que resalte */
+.instructions-list li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.instructions-list li::before {
+    content: "Paso " counter(step) ": "; /* Manualmente añadir "Paso X:" */
+    counter-increment: step;
+    font-weight: bold;
+}
+
+/* Instrucciones sin numeración automática */
+.materials-list {
+    list-style: none; /* Elimina la numeración automática */
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Aún puedes estilizar el texto del paso para que resalte */
+.materials-list li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.materials-list li::before {
+    content: counter(step) ". "; /* Manualmente añadir "Paso X:" */
+    counter-increment: step;
+    font-weight: bold;
+}
+
+.materials-list {
+    counter-reset: step;
+}
+
+.instructions-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Margen interno para las secciones */
+section {
+    margin-bottom: 40px; /* Asegura espacio entre las secciones */
+    padding: 0 5%; /* Añade margen en porcentaje a los lados para pantallas responsivas */
+}
+
+/* Estilo responsivo general para móviles */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 3%; /* Reduce el padding en móviles */
+    }
+
+    section {
+        padding: 0 3%; /* Reduce el padding en secciones para móviles */
+    }
+
+    header {
+        padding: 15px; /* Asegura que el padding no sea demasiado en móvil */
+    }
+
+    .home-icon {
+        width: 25px; /* Ajusta el tamaño del ícono en móviles */
+        height: 25px;
+    }
+}
