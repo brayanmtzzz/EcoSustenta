@@ -275,27 +275,37 @@ footer {
 /* Responsividad para móviles */
 @media (max-width: 768px) {
 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #007208;
+    }
+
     /* Ocultar el menú por defecto en móviles y mostrar el icono de menú */
     .nav-menu {
-        position: fixed;
-        right: -100%;
-        top: 0;
-        height: 100vh;
-        width: 300px;
-        background-color: #5DBB63;
-        display: flex;
+        position: absolute;
+        top: 60px; /* Por debajo del header */
+        right: 0;
+        background-color: #007208;
+        width: 100%; /* Ancho del menú */
+        display: none; /* Oculto por defecto */
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        transition: 0.3s ease;
+        gap: 15px;
+        border-radius: 0 0 10px 10px;
+        align-items: flex-start;
+        padding-bottom: 20px
     }
 
     /* Mostrar el menú hamburguesa en pantallas pequeñas */
-    .nav-menu {
-        padding: 0 20px;
-        justify-content: flex-start;
-        gap: 30px;
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        padding-left: 20px;
+        /* margin-bottom: 10px; */
     }
 
     .nav-menu li a {
@@ -305,38 +315,35 @@ footer {
     .content-grid {
         grid-template-columns: 1fr;
     }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
         
     .menu-toggle .bar {
+        display: block;
         width: 30px;
         height: 3px;
-        background-color: #fff;
+        background-color: white;
         margin: 5px 0;
-        transition: 0.3s ease;
-    }
-        
-    .menu-toggle .bar:nth-child(1) {
-        transform: translateY(-10px);   
-    }
-        
-    .menu-toggle .bar:nth-child(3) {
-        transform: translateY(10px);
+        transition: all 0.3s ease;
     }
         
     .menu-toggle.active .bar:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
-        
+
     .menu-toggle.active .bar:nth-child(2) {
         opacity: 0;
     }
-        
+
     .menu-toggle.active .bar:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 
-    
-    .menu-toggle {
-        display: block; /* Mostrar en pantallas pequeñas */
+    .nav-logo {
+        margin-left: 10px;
     }
 
     /* Ajuste para las tarjetas en móviles */
