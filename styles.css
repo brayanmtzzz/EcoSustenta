@@ -372,6 +372,10 @@ footer {
     .slide-inner {
         height: 166px; /* Ajustar el tamaño del carrusel en móvil */
     }
+    .educational-resources ul {
+        list-style: none;
+        padding: 0;
+    }
 }
 
 .dispensadores-text p {
@@ -381,7 +385,6 @@ footer {
 /* Sección de Recursos Educativos */
 .educational-resources ul {
     list-style: none;
-    /* padding: 0 45px; */
 }
 
 .educational-resources ul li {
