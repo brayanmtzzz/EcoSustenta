@@ -117,6 +117,29 @@ header {
     counter-reset: step;
 }
 
+/* Instrucciones sin numeración automática */
+.materials-list {
+    list-style: none; /* Elimina la numeración automática */
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Aún puedes estilizar el texto del paso para que resalte */
+.materials-list li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.materials-list li::before {
+    content: counter(step) ". "; /* Manualmente añadir "Paso X:" */
+    counter-increment: step;
+    font-weight: bold;
+}
+
+.materials-list {
+    counter-reset: step;
+}
+
 .instructions-image {
     max-width: 100%;
     height: auto;

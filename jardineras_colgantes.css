@@ -113,6 +113,10 @@ header {
     font-weight: bold;
 }
 
+.instructions-list {
+    counter-reset: step;
+}
+
 /* Instrucciones sin numeración automática */
 .materials-list {
     list-style: none; /* Elimina la numeración automática */
